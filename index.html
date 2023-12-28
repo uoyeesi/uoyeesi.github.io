@@ -1,0 +1,396 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kevin Sokoli</title>
+    <link rel="stylesheet" href="styles.css"> <!-- You can link to an external CSS file for styling -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css'>
+    <script src="java.js"></script>
+</head>
+<body>
+    <!-- Hamburger Menu Icon -->
+    <div class="menu-icon">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    <!-- Side Menu -->
+    <nav class="side-menu">
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#Projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    </div>
+
+    <!-- Rest of your website content -->
+    <header>
+        <video autoplay playsinline loop muted id="video-bg">
+            <source src="https://tactusmarketing.com/wp-content/uploads/tactus-waves-hero.mp4" type="video/mp4">
+        </video>
+        <div class="head-card">
+            <img src="Kevin.jpg" alt="Your Photo">
+            <div class="head-card-content">
+                <h3>Kevin Sokoli</h3>
+                <p><i class="fas fa-code"></i> Software Engineer</p>
+                <p><span class="email-symbol">&#9993;</span> kevinsokoli1@gmail.com</p>
+                <p><span class="location-symbol">&#127758;</span>Weymouth, Massachusetts, USA</p>
+            </div>
+        </div>
+
+    </header>
+
+    <h2 class="section-title">
+        <i class="title-icon fa">👤</i>About Me
+    </h2>
+    <div id="about-card">
+        <section id="about">
+            <p>
+                Hello there! I'm Kevin Sokoli, a passionate and dedicated software engineer with a profound affection for Python. Currently, I'm immersed in the world of C# while creating MVC and web applications using Microsoft Azure.
+                My journey into building softwares began with a fascination for building solutions that can make a real impact. Over time, I've cultivated my skills and expertise in developing MVC (Model-View-Controller) applications and web solutions, leveraging Microsoft Azure's capabilities to deliver cutting-edge experiences.
+                Python is not just a programming language for me; it's a source of endless inspiration. Its simplicity, readability, and versatility make it my language of choice for a wide range of projects. While currently exploring the C# ecosystem, my heart remains committed to Python's elegance and efficiency.
+                In the dynamic world of software development, I firmly adhere to the philosophy of never giving up. Challenges are opportunities for growth, and I relish the process of finding innovative solutions to complex problems.
+            </p>
+        </section>
+    </div>
+
+    <section class="section" id="education">
+        <div class="section-title">
+            <h2> <i class="title-icon fa fa-graduation-cap"></i>Education</h2>
+        </div>
+        <div class="education">
+            <div class="timeline-block">
+                <div class="timeline-right">
+                    <div class="timeline-dot graduation-hat">
+                        <h4 class="text-uppercase text-center"><i class="title-icon fa fa-graduation-cap"></i></h4>
+                    </div>
+
+                    <div class="education-card timeline-content">
+                        <div class="card-content">
+                            <h3>High School</h3>
+                            <div class="timeline-info">
+                                <h4>"Muharrem Collaku" Pogradec, Albania</h4>
+                                <h4><small>Sep 2012 - Jul 2016</small></h4>
+                            </div>
+                            <p>
+                                Successfully completing my high school education pursuing an advanced degree in Mathematics maintaing a GPA 4.0.
+                                This educational journey not only equipped me with a strong foundation in mathematics but also instilled a deep passion for learning and problem-solving.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more left timeline blocks as needed -->
+            </div>
+
+            <div class="timeline-block">
+                <div class="timeline-right">
+                    <div class="timeline-dot graduation-hat">
+                        <h4 class="text-uppercase text-center"><i class="title-icon fa fa-graduation-cap"></i></h4>
+                    </div>
+
+                    <div class="education-card timeline-content">
+                        <div class="timeline-content">
+                            <h3>University</h3>
+                            <div class="timeline-info">
+                                <h4>"University of Massachusetts Boston" Boston, MA</h4>
+                                <h4>Oct 2018 - Jul 2022</h4>
+                            </div>
+                            <p>Successfully achieved my Bachelor of Science degree in Computer Science at the University of Massachusetts Boston. I graduated with a commendable GPA of 3.0.</p>
+                        </div>
+                    </div>
+                    <!-- Add more right timeline blocks as needed -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="Projects">
+        <h2 class="section-title">
+            <i class="fab fa-python"></i>
+            Python Projects
+        </h2>
+        <div class="card-container">
+            <div class="card">
+                <div class="face face1">
+                    <div class="content">
+                        <div class="dfa-transition">
+                            <i class="fas fa-circle"></i> <!-- State 1 -->
+                            <i class="fas fa-arrow-right"></i> <!-- Transition -->
+                            <i class="fas fa-circle"></i> <!-- State 2 -->
+                        </div>
+                        <h3>DFA Transition</h3>
+                    </div>
+                </div>
+                <div class="face face2">
+                    <div class="content">
+                        <p>This project, developed in Python, employs a 5-tuple DFA model to elegantly represent the states and transitions of an electronic door.</p>
+                        <a href="#" class="card-link">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add more cards as needed -->
+
+            <div class="card">
+                <div class="face face1">
+                    <div class="content">
+                        <div class="pipeline">
+                            <i class="fas fa-database"></i> <!-- Input Data -->
+                            <i class="fas fa-arrow-right"></i> <!-- Connection -->
+                            <i class="fas fa-cogs"></i> <!-- Processing Step 1 -->
+                            <i class="fas fa-arrow-right"></i> <!-- Connection -->
+                            <i class="fas fa-code"></i> <!-- Processing Step 2 -->
+                            <i class="fas fa-arrow-right"></i> <!-- Connection -->
+                            <i class="fas fa-flask"></i> <!-- Processing Step 3 -->
+                            <i class="fas fa-arrow-right"></i> <!-- Connection -->
+                            <i class="fas fa-chart-bar"></i> <!-- Output 1 -->
+                            <i class="fas fa-arrow-right"></i> <!-- Connection -->
+                            <i class="fas fa-file-code"></i> <!-- Output 2 -->
+                            <i class="fas fa-arrow-right"></i> <!-- Connection -->
+                            <i class="fas fa-check-circle"></i> <!-- Success -->
+                            <i class="fas fa-arrow-right"></i> <!-- Connection -->
+                            <i class="fas fa-chart-pie"></i> <!-- Final Output -->
+                        </div>
+                        <h3>Pipeline Application</h3>
+                    </div>
+                </div>
+                <div class="face face2">
+                    <div class="content">
+                        <p> Leveraging publicly available data from sources like courtlistener.com, the application will efficiently download, organize, and store court information.</p>
+                        <a href="#" class="card-link">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="face face1">
+                    <div class="content">
+                        <div class="face-recognition">
+                            <i class="far fa-user"></i> <!-- Initial face -->
+                            <i class="fas fa-search"></i> <!-- Recognition process -->
+                            <i class="fas fa-check"></i> <!-- Successful recognition -->
+                        </div>
+                        <h3>Face Recognition</h3>
+                    </div>
+                </div>
+                <div class="face face2">
+                    <div class="content">
+                        <p> This code essentially creates a simple face recognition application that identifies a known face in real-time through a webcam feed.</p>
+                        <a href="#" class="card-link">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add more cards as needed -->
+
+            <div class="card">
+                <div class="face face1">
+                    <div class="content">
+                        <div>
+                            <i class="fas fa-user-plus"></i> <!-- User Icon -->
+                            <i class="fas fa-table"></i>      <!-- Table Icon -->
+                            <i class="fas fa-check-circle"></i> <!-- Check-in Icon -->
+                        </div>
+                        <h3>Registration Table</h3>
+                    </div>
+                </div>
+                <div class="face face2">
+                    <div class="content">
+                        <p>A basic implementation of a contact management system using the Tkinter library for the graphical user interface and SQLite for database storage. The system allows users to register contacts, view, update, delete, and search for existing records.</p>
+                        <a href="#" class="card-link">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr />
+        <h2 class="section-title">
+            <i class="fab fa-java"></i>
+            Java Projects
+        </h2>
+        <div class="card-container">
+            <div class="card">
+                <div class="face face1">
+                    <div class="content">
+                        <div class="icon-container">
+                            <i class="fas fa-cogs fa-icon"></i>
+                            <i class="fas fa-laptop-code fa-icon"></i>
+                        </div>
+                        <h3>Percolation</h3>
+                    </div>
+                </div>
+                <div class="face face2">
+                    <div class="content">
+                        <p> This project involves implementing a program to estimate the percolation threshold of a system using Monte Carlo simulation. Two implementations, ArrayPercolation and UFPercolation, are developed to model a percolation system.</p>
+                        <a href="#" class="card-link">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add more cards as needed -->
+
+            <div class="card">
+                <div class="face face1">
+                    <div class="content">
+                        <div>
+                            <i class="fas fa-code icon"></i>
+                            <i class="fas fa-check icon"></i>
+                            <i class="fas fa-info-circle icon"></i>
+                        </div>
+                        <h3>Autocomplete</h3>
+                    </div>
+                </div>
+                <div class="face face2">
+                    <div class="content">
+                        <p>Implement an autocomplete program for a set of strings with nonnegative weights. The program should find all strings starting with a given prefix, ordered by weight.</p>
+                        <a href="#" class="card-link">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="face face1">
+                    <div class="content">
+                        <i class="fas fa-puzzle-piece"></i>
+                        <h3>8 Puzzle</h3>
+                    </div>
+                </div>
+                <div class="face face2">
+                    <div class="content">
+                        <p>This project has two critical optimizations to enhance the algorithm's performance.The Board data type represents the puzzle state, while the Solver data type utilizes A* to find solutions. The project includes methods to check solvability, compute distances, and generate solutions.</p>
+                        <a href="#" class="card-link">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add more cards as needed -->
+
+            <div class="card">
+                <div class="face face1">
+                    <div class="content">
+                        <div>
+                            <i class="fas fa-book"></i>
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h3>WordNet</h3>
+                    </div>
+                </div>
+                <div class="face face2">
+                    <div class="content">
+                        <p> The WordNet project involves building a directed acyclic graph (DAG) that represents the semantic relationships between synsets (sets of synonyms) in the English language. Synsets are connected through hypernym relationships, where one synset is a more general form (hypernym) of another synset (hyponym).</p>
+                        <a href="#" class="card-link">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr />
+        <h2 class="section-title">
+            C# Projects
+        </h2>
+
+        <div class="card-container">
+            <div class="card">
+                <div class="face face1">
+                    <div class="content">
+                        <div>
+                            <i class="fas fa-file-alt"></i>
+                            <i class="fas fa-search"></i>
+                            <i class="fas fa-bell"></i>
+                        </div>
+                        <h3>Vendor Request</h3>
+                    </div>
+                </div>
+                <div class="face face2">
+                    <div class="content">
+                        <p> The Vendor Request Application is a comprehensive solution designed to streamline and manage the vendor request process within an organization. It provides a user-friendly interface for employees to submit, track, and manage requests related to vendor engagement.</p>
+                        <a href="#" class="card-link">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add more cards as needed -->
+
+            <div class="card">
+                <div class="face face1">
+                    <div class="content">
+                        <div>
+                            <i class="far fa-calendar-alt calendar-icon"></i>
+                            <i class="far fa-clock feature-icon"></i>
+                            <i class="far fa-bell feature-icon"></i>
+                            <i class="far fa-calendar-check feature-icon"></i>
+                            <i class="far fa-calendar-plus feature-icon"></i>
+                        </div>
+                        <h3>Calendar Application</h3>
+                    </div>
+                </div>
+                <div class="face face2">
+                    <div class="content">
+                        <p>A cutting-edge Calendar Application meticulously designed with the power of MVC architecture. This application redefines how you manage your time and stay organized, offering a seamless and intuitive experience.</p>
+                        <a href="#" class="card-link">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="face face1">
+                    <div class="content">
+                        <i class="fas fa-cogs"></i>
+                        <h3>Development Pipeline</h3>
+                    </div>
+                </div>
+                <div class="face face2">
+                    <div class="content">
+                        <p>a cutting-edge MVC (Model-View-Controller) Azure application designed to revolutionize project management. With this innovative project pipeline, you can effortlessly extract data from the database and present it in a dynamic table format. </p>
+                        <a href="#" class="card-link">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add more cards as needed -->
+
+            <div class="card">
+                <div class="face face1">
+                    <div class="content">
+                        <i class="fas fa-money-check-alt"></i>
+                        <h3>Fed Wire Application</h3>
+                    </div>
+                </div>
+                <div class="face face2">
+                    <div class="content">
+                        <p>Fed Wire Application simplifies your financial experience through an Azure-powered MVC framework. Designed for user convenience, it puts control in your hands. Easily manage debit card transactions, customize settings, and access customer support seamlessly.</p>
+                        <a href="#" class="card-link">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 class="section-title">
+            <i class="title-icon fa">✉</i>Contact Me
+        </h2>
+        <p>Feel free to get in touch with me:</p>
+        <ul>
+            <li>&#9993; Email: <a href="mailto:kevinsokoli1@gmail.com">kevinsokoli1@gmail.com</a></li>
+            <li><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://www.linkedin.com/in/kevin-sokoli"> LinkedIn</a></li>
+            <li><i class="fab fa-github"></i> GitHub: <a href="https://github.com/kevinsokoli">GitHub</a></li>
+        </ul>
+    </section>
+    <footer>
+        <p>&copy; 2023 Kevin Sokoli</p>
+    </footer>
+    <ul class="circles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</body>
+</html>
