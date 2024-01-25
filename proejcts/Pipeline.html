@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Court Information Application</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #app-container {
+            text-align: center;
+        }
+
+        .card {
+            width: 80%;
+            max-width: 600px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            margin: 20px;
+        }
+
+        .card-header {
+            background-color: #3498db;
+            color: #fff;
+            padding: 16px;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .button {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+            .button:hover {
+                background-color: #2980b9;
+            }
+    </style>
+</head>
+<body>
+    <div id="app-container">
+        <div class="card">
+            <div class="card-header">
+                <h2>Court Information Application</h2>
+            </div>
+
+            <div class="card-content">
+                <p>Efficiently download, organize, and store court information with this application.</p>
+
+                <button class="button" onclick="downloadData()">Download Court Information</button>
+                <button class="button" onclick="organizeData()">Organize Court Information</button>
+                <button class="button" onclick="storeData()">Store Court Information</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Dummy functions, replace with actual functionality
+        function downloadData() {
+            alert('Downloading court information...');
+        }
+
+        function organizeData() {
+            alert('Organizing court information...');
+        }
+
+        function storeData() {
+            alert('Storing court information...');
+        }
+    </script>
+</body>
+</html>

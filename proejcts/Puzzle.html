@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puzzle Solver Visualization</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column; /* Added to align items vertically */
+            height: 100vh;
+            margin: 0;
+        }
+
+        h2, button, #puzzle-container {
+            margin-bottom: 20px; /* Added margin for spacing */
+        }
+
+        #puzzle-container {
+            display: grid;
+            grid-template-columns: repeat(3, 60px);
+            grid-gap: 2px;
+        }
+
+        .puzzle-cell {
+            width: 60px;
+            height: 60px;
+            background-color: #ddd;
+            border: 1px solid #aaa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Puzzle Solver Visualization</h2>
+    <button onclick="solvePuzzle()">Solve Puzzle</button>
+    <div id="puzzle-container"></div>
+
+    <script>
+        // Sample puzzle state (1 represents an empty cell)
+        const initialPuzzle = [
+            [1, 2, 3],
+            [4, 5, 6],
+            [7, 8, 9]
+        ];
+
+        // Function to display the puzzle
+        function displayPuzzle(puzzle) {
+            const puzzleContainer = document.getElementById('puzzle-container');
+            puzzleContainer.innerHTML = '';
+
+            for (let i = 0; i < puzzle.length; i++) {
+                for (let j = 0; j < puzzle[i].length; j++) {
+                    const cell = document.createElement('div');
+                    cell.className = 'puzzle-cell';
+                    cell.textContent = puzzle[i][j] === 1 ? '' : puzzle[i][j];
+                    puzzleContainer.appendChild(cell);
+                }
+            }
+        }
+
+        // Function to solve the puzzle (simplified A* algorithm)
+        function solvePuzzle() {
+            // Simulate solving logic (replace with actual algorithm)
+            alert('Solving puzzle...');
+        }
+
+        // Display initial puzzle state
+        displayPuzzle(initialPuzzle);
+    </script>
+</body>
+</html>

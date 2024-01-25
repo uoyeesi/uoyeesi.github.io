@@ -1,0 +1,171 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar Application</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #app-container {
+            text-align: center;
+        }
+
+        .calendar {
+            width: 80%;
+            max-width: 600px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .calendar-header {
+            background-color: #3498db;
+            color: #fff;
+            padding: 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .calendar-days {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            border-bottom: 1px solid #ddd;
+        }
+
+        .day {
+            padding: 12px;
+            text-align: center;
+            border-right: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+            cursor: pointer;
+        }
+
+            .day:hover {
+                background-color: #f0f0f0;
+            }
+
+        .calendar-body {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+        }
+
+        .day-event {
+            padding: 8px;
+            background-color: #3498db;
+            color: #fff;
+            border-radius: 4px;
+            margin-bottom: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div id="app-container">
+        <div class="calendar" id="calendar-container">
+            <!-- Calendar content will be dynamically generated here using JavaScript -->
+        </div>
+    </div>
+
+    <script>
+        // Function to generate a calendar for a given month and year
+        function generateCalendar(month, year) {
+            const daysInMonth = new Date(year, month + 1, 0).getDate();
+            const firstDay = new Date(year, month, 1).getDay();
+
+            const calendarContainer = document.getElementById('calendar-container');
+            calendarContainer.innerHTML = '';
+
+            // Calendar Header
+            const header = document.createElement('div');
+            header.classList.add('calendar-header');
+            header.innerHTML = `
+                <button onclick="prevMonth()">&lt;</button>
+                <h2>${new Date(year, month).toLocaleString('default', { month: 'long', year: 'numeric' })}</h2>
+                <button onclick="nextMonth()">&gt;</button>
+            `;
+            calendarContainer.appendChild(header);
+
+            // Calendar Days
+            const daysOfWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+            const daysRow = document.createElement('div');
+            daysRow.classList.add('calendar-days');
+            daysOfWeek.forEach(day => {
+                const dayCell = document.createElement('div');
+                dayCell.classList.add('day');
+                dayCell.textContent = day;
+                daysRow.appendChild(dayCell);
+            });
+            calendarContainer.appendChild(daysRow);
+
+            // Calendar Body
+            const calendarBody = document.createElement('div');
+            calendarBody.classList.add('calendar-body');
+
+            for (let i = 0; i < firstDay; i++) {
+                const emptyCell = document.createElement('div');
+                emptyCell.classList.add('day');
+                calendarBody.appendChild(emptyCell);
+            }
+
+            for (let day = 1; day <= daysInMonth; day++) {
+                const dayCell = document.createElement('div');
+                dayCell.classList.add('day');
+                dayCell.textContent = day;
+                dayCell.onclick = () => displayDayEvents(day, month, year);
+                calendarBody.appendChild(dayCell);
+            }
+
+            calendarContainer.appendChild(calendarBody);
+        }
+
+        // Function to display events for a specific day (dummy data)
+        function displayDayEvents(day, month, year) {
+            const eventContainer = document.getElementById('event-container');
+            eventContainer.innerHTML = `<h3>Events for ${month + 1}/${day}/${year}</h3>`;
+
+            // Dummy data - replace with actual data retrieval
+            const events = ['Meeting with Client', 'Project Deadline', 'Lunch with Team'];
+
+            events.forEach(event => {
+                const eventItem = document.createElement('div');
+                eventItem.classList.add('day-event');
+                eventItem.textContent = event;
+                eventContainer.appendChild(eventItem);
+            });
+        }
+
+        // Function to go to the previous month
+        function prevMonth() {
+            currentMonth--;
+            if (currentMonth < 0) {
+                currentMonth = 11;
+                currentYear--;
+            }
+            generateCalendar(currentMonth, currentYear);
+        }
+
+        // Function to go to the next month
+        function nextMonth() {
+            currentMonth++;
+            if (currentMonth > 11) {
+                currentMonth = 0;
+                currentYear++;
+            }
+            generateCalendar(currentMonth, currentYear);
+        }
+
+        // Initial load
+        let currentMonth = new Date().getMonth();
+        let currentYear = new Date().getFullYear();
+        generateCalendar(currentMonth, currentYear);
+    </script>
+</body>
+</html>
