@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendor Request Application</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #app-container {
+            text-align: center;
+        }
+
+        .card {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            width: 80%;
+            max-width: 600px;
+            margin-bottom: 20px;
+        }
+
+        .card-header {
+            background-color: #3498db;
+            color: #fff;
+            padding: 16px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        label {
+            margin-bottom: 8px;
+        }
+
+        input, select, button, textarea {
+            margin-bottom: 16px;
+            padding: 10px;
+            font-size: 16px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #3498db;
+            color: #fff;
+            cursor: pointer;
+        }
+
+            button:hover {
+                background-color: #2980b9;
+            }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #3498db;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div id="app-container">
+        <div class="card">
+            <div class="card-header">
+                <h2>Vendor Request Application</h2>
+            </div>
+
+            <form>
+                <label for="vendorName">Vendor Name:</label>
+                <input type="text" id="vendorName" name="vendorName" required>
+
+                <label for="requestType">Request Type:</label>
+                <select id="requestType" name="requestType" required>
+                    <option value="product">Product</option>
+                    <option value="service">Service</option>
+                </select>
+
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" rows="4" required></textarea>
+
+                <button type="submit">Submit Request</button>
+            </form>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <h2>Vendor Requests</h2>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Request ID</th>
+                        <th>Vendor Name</th>
+                        <th>Request Type</th>
+                        <th>Description</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Table rows will be dynamically populated with actual data -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
