@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DFA Visualization</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #visualization-container {
+            position: relative;
+        }
+
+        .state {
+            width: 40px;
+            height: 40px;
+            border: 1px solid #000;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10px;
+            position: relative;
+        }
+
+        .transition {
+            width: 100px;
+            height: 2px;
+            background-color: #000;
+            position: absolute;
+            animation: moveTransition 2s linear infinite;
+        }
+
+        @keyframes moveTransition {
+            0% {
+                transform: translateX(0);
+            }
+
+            50% {
+                transform: translateX(50px);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="visualization-container">
+        <div class="state" id="q0">q0</div>
+        <div class="state" id="q1">q1</div>
+        <div class="state" id="q2">q2</div>
+
+        <script>
+            // Define DFA transitions
+            const transitions = [
+                { from: 'q0', to: 'q1', input: '0' },
+                { from: 'q1', to: 'q2', input: '1' },
+                { from: 'q2', to: 'q0', input: '0' },
+            ];
+
+            // Function to draw transitions
+            function drawTransition(transition) {
+                const fromState = document.getElementById(transition.from);
+                const toState = document.getElementById(transition.to);
+
+                const transitionElement = document.createElement('div');
+                transitionElement.className = 'transition';
+                transitionElement.style.left = `${fromState.offsetLeft + fromState.offsetWidth / 2}px`;
+                transitionElement.style.top = `${fromState.offsetTop + fromState.offsetHeight / 2}px`;
+
+                const angle = Math.atan2(toState.offsetTop - fromState.offsetTop, toState.offsetLeft - fromState.offsetLeft);
+                const length = Math.sqrt(Math.pow(toState.offsetTop - fromState.offsetTop, 2) + Math.pow(toState.offsetLeft - fromState.offsetLeft, 2));
+
+                transitionElement.style.width = `${length}px`;
+                transitionElement.style.transform = `rotate(${angle}rad)`;
+
+                document.getElementById('visualization-container').appendChild(transitionElement);
+            }
+
+            // Draw all transitions
+            transitions.forEach(drawTransition);
+        </script>
+    </div>
+</body>
+</html>
