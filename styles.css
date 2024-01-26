@@ -25,7 +25,6 @@ i.fas.fa-code {
     text-align: center; /* Center the text within the section */
     max-width: 1500px; /* Optional: Set a maximum width for the content */
     padding: 20px; /* Optional: Add some padding for spacing */
-    font-family: "Times New Roman", Times, serif; /* Change the font style */
 }
 
 #about h2 {
@@ -127,11 +126,11 @@ footer {
 .side-menu {
     position: fixed;
     top: 0;
-    left: -250px; /* Hide the menu off-screen by default */
+    left: -250px;
     width: 250px;
     height: 100%;
-    background-color: #333;
-    padding-top: 60px; /* Add some top padding to avoid overlap with menu icon */
+    background-color: rgba(51, 51, 51, 0.8); /* Adjust the alpha value as needed */
+    padding-top: 60px;
     transition: 0.4s;
 }
 
@@ -139,27 +138,28 @@ footer {
         left: 0;
     }
 
-    .side-menu ul {
-        list-style: none;
-        padding: 0;
-    }
 
-        .side-menu ul li {
-            margin: 20px 0;
-            text-align: center;
-        }
+.side-menu ul {
+    list-style: none;
+    padding: 0;
+}
 
-            .side-menu ul li a {
-                text-decoration: none;
-                color: #fff;
-                font-size: 20px;
-                display: block;
-                transition: 0.3s;
-            }
+.side-menu ul li {
+    margin: 20px 0;
+    text-align: center;
+}
 
-                .side-menu ul li a:hover {
-                    color: #3498db;
-                }
+.side-menu ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    display: block;
+    transition: 0.3s;
+}
+
+.side-menu ul li a:hover {
+    color: #3498db;
+}
 
 
 /* Card Styles */
@@ -188,7 +188,6 @@ footer {
 
 .head-card-content {
     flex-grow: 1;
-    font-family: "Times New Roman", Times, serif;
 }
 
 .head-card h3 {
@@ -239,74 +238,14 @@ nav ul li a:hover {
     color: #3498db;
 }
 
-/* Education */
-/* Style the education section */
 
-.graduation-hat {
-    position: relative;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: #3498db;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 20px;
-    color: #fff;
-    font-size: 18px;
-    cursor: pointer;
-    animation: hatAnimation 1s ease-in-out infinite alternate;
-    transform-origin: center bottom;
-}
-
-@keyframes hatAnimation {
-    0% {
-        transform: translateY(0) rotate(0deg);
-    }
-
-    100% {
-        transform: translateY(-10px) rotate(5deg);
-    }
-}
-.education {
-    display: flex;
-    align-items: center;
-    background-color: rgba(128, 128, 128, 0.5);
-    border-radius: 40px;
-    padding: 50px;
-    box-shadow: 5px 2px 50px rgba(0, 0, 0, 0.2);
-    max-width: 1400px;
-    margin: 0 auto;
-    transition: background-color 0.3s ease;
-    font-family: "Times New Roman", Times, serif;
-}
-
-.section-title {
-    text-align: center;
-    font-family: "Times New Roman", Times, serif;
-    text-decoration: underline; /* Add an underline to the text */
-}
-
-.timeline-block {
-    flex: 1; /* Distribute space evenly between timeline blocks */
-    margin: 0 10px; /* Add horizontal margin between timeline blocks */
-    font-family: "Times New Roman", Times, serif;
-}
-.timeline-info h6 {
-    font-size: 16px; /* Adjust the font size as needed */
-    font-family: "Times New Roman", Times, serif;
-}
-.timeline-content {
-    flex-grow: 1;
-}
 
 
 /* Style the "Contact Me" section */
 #contact {
     background-color: rgba(128, 128, 128, 0.5);
     padding: 20px;
-    text-align: center; /* Center the text horizontally */
-    font-family: "Times New Roman", Times, serif;
+    text-align: center; 
     text-decoration-color: rgba(0, 0, 0, 0.2);
     text-shadow: revert;
     
@@ -369,7 +308,6 @@ nav ul li a:hover {
     max-width: 1800px;
     margin: 40px auto;
     transition: background-color 0.3s ease;
-    font-family: "Times New Roman", Times, serif;
 }
 
 .skill {
@@ -398,13 +336,6 @@ nav ul li a:hover {
     padding-right: 10px;
 }
 
-
-
-/* Style for the section title */
-.section-title {
-    text-align: center;
-    font-family: "Times New Roman", Times, serif;
-}
 
 /* Style for the symbol/icon */
 .title-icon {
@@ -723,17 +654,75 @@ body {
             box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);
         }
 
+
+
+.graduation-hat {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #3498db;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    animation: hatAnimation 1s ease-in-out infinite alternate;
+    transform-origin: center bottom;
+}
+
+@keyframes hatAnimation {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    100% {
+        transform: translateY(-10px) rotate(5deg);
+    }
+}
+
+.education {
+    display: flex;
+    align-items: center;
+    background-color: rgba(128, 128, 128, 0.5);
+    border-radius: 40px;
+    padding: 50px;
+    box-shadow: 5px 2px 50px rgba(0, 0, 0, 0.2);
+    max-width: 1400px;
+    margin: 0 auto;
+    transition: background-color 0.3s ease;
+}
+
+.section-title {
+    font-size: 0px;
+    text-align: center;
+    text-decoration: underline; /* Add an underline to the text */
+}
+
+.timeline-block {
+    flex: 1; /* Distribute space evenly between timeline blocks */
+    margin: 0 10px; /* Add horizontal margin between timeline blocks */
+}
+
+.timeline-info h6 {
+    font-size: 16px; /* Adjust the font size as needed */
+}
+
+.timeline-content {
+    flex-grow: 1;
+}
 .education-card {
     display: flex;
     align-items: center;
-    /*background-color: rgba(128, 128, 128, 0.5);
-    */ /* Change the background color to your desired color */
+    background-color: rgba(128, 128, 128, 0.5); /* Set alpha to 0.5 for 50% transparency */
     border-radius: 40px;
-    padding: 10px;
+    padding: 20px;
     box-shadow: 10px 2px 100px rgba(0, 0, 0, 0.2);
     max-width: 600px;
-    margin: -10px auto;
-    transition: background-color 0.7s ease; /* Add a smooth transition effect */
+    margin: 10px 0;
+    transition: background-color 0.7s ease;
 }
 
     .education-card:hover {
@@ -748,7 +737,7 @@ body {
 
 .education-card-content {
     flex-grow: 1;
-    font-family: "Times New Roman", Times, serif;
+    margin-left: 20px;
 }
 
 .education-card h3 {
@@ -765,4 +754,60 @@ body {
 /* Add a simple scale animation on hover */
 .education-card:hover img {
     transform: scale(1.1);
+}
+
+.section-subtitle {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#experience {
+    text-align: center;
+    max-width: 800px; /* Adjusted maximum width for better readability */
+    margin: 0 auto; /* Center the section horizontally */
+    padding: 20px;
+}
+
+/* Style the section title */
+.section-title {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #333; /* Adjust the color to a readable tone */
+}
+
+/* Style the subtitle */
+.section-subtitle {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #555; /* Adjust the color for contrast */
+}
+
+/* Style the experience list */
+.experience-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+    .experience-list li {
+        margin-bottom: 15px;
+        font-size: 18px;
+        line-height: 1.5;
+        color: #666; /* Adjust the color for contrast */
+    }
+
+/* Style the title icon */
+
+
+/* Add a more universal icon for "Experience" */
+.fa-briefcase::before {
+    content: "\f0b1"; /* Unicode for a briefcase icon */
+}
+
+/* Add a subtle box-shadow for a modern touch */
+#experience {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: #fff; /* Adjust the background color for better contrast */
 }
