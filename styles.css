@@ -771,11 +771,16 @@ body {
 
 /* Style the section title */
 .section-title {
-    font-size: 22px;
+    font-size: 30px;
     margin-bottom: 10px;
     color: #333; /* Adjust the color to a readable tone */
 }
-
+.smaller-title {
+    /* Styles for the smaller title (Programmer/Analyst) */
+    font-size: 20px;
+    font-style: italic; /* Example italic style */
+    /* Add any other styles you want for the smaller title */
+}
 /* Style the subtitle */
 .section-subtitle {
     font-size: 18px;
