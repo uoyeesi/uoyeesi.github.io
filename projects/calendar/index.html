@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calendar Application</title>
+    <link rel="stylesheet" href="../../styles.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -73,7 +74,18 @@
             <!-- Calendar content will be dynamically generated here using JavaScript -->
         </div>
     </div>
-
+    <ul class="circles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
     <script>
         // Function to generate a calendar for a given month and year
         function generateCalendar(month, year) {
@@ -87,10 +99,10 @@
             const header = document.createElement('div');
             header.classList.add('calendar-header');
             header.innerHTML = `
-                <button onclick="prevMonth()">&lt;</button>
-                <h2>${new Date(year, month).toLocaleString('default', { month: 'long', year: 'numeric' })}</h2>
-                <button onclick="nextMonth()">&gt;</button>
-            `;
+                    <button onclick="prevMonth()">&lt;</button>
+                    <h2>${new Date(year, month).toLocaleString('default', { month: 'long', year: 'numeric' })}</h2>
+                    <button onclick="nextMonth()">&gt;</button>
+                `;
             calendarContainer.appendChild(header);
 
             // Calendar Days
