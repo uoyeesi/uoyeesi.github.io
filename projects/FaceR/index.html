@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Face Recognition App</title>
+    <link rel="stylesheet" href="../../styles.css">
     <style>
         body {
             display: flex;
@@ -11,15 +12,25 @@
             align-items: center;
             height: 100vh;
             margin: 0;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
         }
 
-        canvas {
+        #faceCanvas {
             border: 2px solid #333;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        #message {
+            margin-top: 20px;
+            font-size: 18px;
+            text-align: center;
         }
     </style>
 </head>
 <body>
     <canvas id="faceCanvas" width="640" height="480"></canvas>
+    <div id="message">Faces Detected: <span id="faceCount">0</span></div>
     <script>
         // Simulated face recognition data (replace with actual data)
         const recognizedFaces = [
@@ -42,10 +53,25 @@
             recognizedFaces.forEach(face => {
                 ctx.strokeRect(face.x, face.y, face.width, face.height);
             });
+
+            // Update face count
+            document.getElementById('faceCount').textContent = recognizedFaces.length;
         }
 
         // Call the drawFaces function on page load
         drawFaces();
     </script>
+    <ul class="circles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
 </body>
 </html>
