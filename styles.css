@@ -91,6 +91,7 @@ footer {
 }
 
 /* Menu Icon and Side Menu Styles */
+/* Style the hamburger menu icon */
 .menu-icon {
     position: fixed;
     top: 20px;
@@ -103,13 +104,25 @@ footer {
 .bar {
     width: 30px;
     height: 3px;
-    background-color: white; /* Set the default color to white */
+    background-color: white;
     margin: 6px 0;
     transition: 0.4s;
 }
 
-/* Remove the color setting for the active state */
+/* Square around the hamburger menu icon */
+.menu-icon::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #ccc; /* Set the color of the square to grey */
+    border-radius: 4px; /* Add rounded corners */
+    z-index: -1; /* Ensure square appears behind the hamburger menu icon */
+}
 
+/* Styles for the active state of the hamburger menu icon */
 .menu-icon.active .bar:nth-child(1) {
     transform: rotate(-45deg) translate(-5px, 6px);
 }
@@ -129,7 +142,7 @@ footer {
     left: -250px;
     width: 250px;
     height: 100%;
-    background-color: rgba(51, 51, 51, 0.8); /* Adjust the alpha value as needed */
+    background-color: rgba(51, 51, 51, 0.8);
     padding-top: 60px;
     transition: 0.4s;
 }
@@ -138,28 +151,28 @@ footer {
         left: 0;
     }
 
+    .side-menu ul {
+        list-style: none;
+        padding: 0;
+    }
 
-.side-menu ul {
-    list-style: none;
-    padding: 0;
-}
+        .side-menu ul li {
+            margin: 20px 0;
+            text-align: center;
+        }
 
-.side-menu ul li {
-    margin: 20px 0;
-    text-align: center;
-}
+            .side-menu ul li a {
+                text-decoration: none;
+                color: #fff;
+                font-size: 20px;
+                display: block;
+                transition: 0.3s;
+            }
 
-.side-menu ul li a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 20px;
-    display: block;
-    transition: 0.3s;
-}
+                .side-menu ul li a:hover {
+                    color: #3498db;
+                }
 
-.side-menu ul li a:hover {
-    color: #3498db;
-}
 
 
 /* Card Styles */
